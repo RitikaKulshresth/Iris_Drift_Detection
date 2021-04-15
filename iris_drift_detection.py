@@ -67,7 +67,7 @@ cd = TabularDrift(X_ref, p_val=.05, categories_per_feature=categories_per_featur
 # filepath = 'my_path'  # change to directory where detector is saved
 # save_detector(cd, filepath)
 # cd = load_detector(filepath)
-print(X_t0)
+#print(X_t0)
 preds = cd.predict(X_t0)
 labels = ['No!', 'Yes!']
 print('Drift? {}'.format(labels[preds['data']['is_drift']]))
@@ -75,7 +75,7 @@ print('Drift? {}'.format(labels[preds['data']['is_drift']]))
 
 
 feature_names = ['SepalLengthCm',  'SepalWidthCm',  'PetalLengthCm',  'PetalWidthCm']
-print(feature_names)
+#print(feature_names)
 
 for f in range(cd.n_features):
     stat = 'K-S'
